@@ -1,30 +1,36 @@
 # Local RAG Agent Pipeline
 
-End-to-end Retrieval-Augmented Generation system built from scratch.
+End-to-end **Retrieval-Augmented Generation (RAG)** system built from scratch, running fully locally.
 
 ## Features
-- PDF loading & semantic chunking
-- FAISS vector store + hybrid retrieval (dense + BM25)
-- Reranking with FlashRank
-- Query rewriting + HyDE
-- Semantic caching (hit rate improvement)
-- Basic router (retrieve / no-retrieve)
-- Offline evaluation with RAGAS
-- Agentic retry loop (self-check & re-retrieve)
+- PDF ingestion & intelligent chunking
+- FAISS vector database + **hybrid retrieval** (dense semantic + BM25 keyword)
+- Reranking with FlashRank/CrossEncoder
+- Query rewriting + HyDE for short/vague questions
+- Semantic caching (significant LLM call savings)
+- Basic router (retrieve / no-retrieve decision)
+- Offline evaluation with **RAGAS** (faithfulness, relevancy, precision, recall)
+- Simple agentic retry loop (self-check & re-retrieve)
 
-## Tech stack
-- Embeddings: all-MiniLM-L6-v2
-- LLM: Llama-3.1-8B-Instruct (via Ollama)
+## Tech Stack
+- Embeddings: `all-MiniLM-L6-v2`
+- LLM: Llama-3.1-8B-Instruct (via Ollama, Q5_K_M quantization)
 - Vector DB: FAISS
+- Reranking: FlashRank / CrossEncoder
 - Evaluation: RAGAS
+- UI: Streamlit (in progress)
 
-## Setup
-1. `pip install -r requirements.txt`
-2. `ollama pull llama3.1:8b-instruct-q5_K_M`
-3. Run `python main.py` or `streamlit run app.py`
+## Quick Start
+1. Clone repo
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   cd YOUR_REPO
 
-## Results
-- Hybrid retrieval improved faithfulness by X% (see RAGAS comparison)
-- Cache hit rate: ~XX% on repeated/similar queries
+## Demo
+<image-card alt="RAG Chat UI" src="screenshot.png" ></image-card>
 
-Work in progress — adding Streamlit UI and more guardrails.
+## Pipeline Flowchart
+
+<image-card alt="RAG Agent Pipeline Flowchart" src="Agentic_RAG(Local).jpg" ></image-card>
+
+High-level overview of the query → retrieval → generation → retry loop.
