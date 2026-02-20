@@ -23,11 +23,12 @@ End-to-end **Retrieval-Augmented Generation (RAG)** system built from scratch, r
 ## Quick Start
 1. Clone repo
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git clone https://github.com/DanielJosephSahayaraj/Local-Agentic-RAG-System_Evaluation-Driven_Built-with-FAISS-Ollama-RAGAS
    cd YOUR_REPO
 
 ## Demo
 <image-card alt="RAG Chat UI" src="screenshot.png" ></image-card>
+<image-card alt="RAG Terminal" src="screenshot1.png" ></image-card>
 
 ## Pipeline Flowchart
 
