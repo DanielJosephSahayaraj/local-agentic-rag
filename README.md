@@ -19,11 +19,11 @@ Chat with your PDFs/documents using a local LLM + hybrid retrieval + basic agent
 
 ## 🛠 Tech Stack
 
-- **LLM** → Ollama + Llama 3.1 8B (Q5_K_M or similar)
+- **LLM** → Ollama + Llama 3.1 8B 
 - **Embeddings** → sentence-transformers / Ollama
 - **Vector DB** → FAISS
 - **UI** → Streamlit
-- **Others** → LangChain / LlamaIndex? (check your pipeline), rank_bm25, ragas (planned)
+- **Others** → LangChain / LlamaIndex, rank_bm25, ragas 
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
