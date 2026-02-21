@@ -33,9 +33,3 @@ Chat with your PDFs/documents using a local LLM + hybrid retrieval + basic agent
   <img src="https://img.shields.io/badge/Offline-100%25-success?style=for-the-badge" alt="Fully Offline">
 </p>
 
-## 🚀 Quick Start
-
-1. Clone the repo
-   ```bash
-   git clone https://github.com/DanielJosephSahayaraj/local-agentic-rag.git
-   cd local-agentic-rag
