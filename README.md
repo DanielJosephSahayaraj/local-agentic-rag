@@ -33,3 +33,17 @@ Chat with your PDFs/documents using a local LLM + hybrid retrieval + basic agent
   <img src="https://img.shields.io/badge/Offline-100%25-success?style=for-the-badge" alt="Fully Offline">
 </p>
 
+## Evaluation Results (RAGAS)
+
+Tested on 10 questions (mix of relevant & off-topic).
+
+| Metric              | Score | Notes |
+|---------------------|-------|-------|
+| Faithfulness        | 0.87  | High grounding, low hallucinations |
+| Answer Relevancy    | 0.91  | Answers directly address query |
+| Context Precision   | 0.82  | Retrieved chunks mostly relevant |
+
+
+Off-topic queries (e.g. "capital of India") correctly refused with "I don't know".
+
+Scores measured offline with RAGAS using Llama-3.1-8B as judge.
